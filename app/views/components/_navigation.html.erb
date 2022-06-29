@@ -1,0 +1,15 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+	<%= link_to "Ruby on Rails Simple Blog", root_path, class: "navbar-brand ms-5" %>
+
+	<ul class="navbar-nav ms-auto me-5">
+		<% if user_signed_in? %>
+
+			<%= link_to "Create Post" , new_post_path , class: "nav-link" %>
+
+		<% else %>
+
+			<%= link_to "Login" , new_session_path(:user) , class: "nav-link" %>
+		
+		<% end %>
+	</ul>
+</nav>
